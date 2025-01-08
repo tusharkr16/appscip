@@ -1,7 +1,7 @@
 // /pages/api/products.ts (for Next.js pages folder)
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function handler(req, res) {
   try {
     const response = await fetch('https://fakestoreapi.com/products');
     const data = await response.json();
