@@ -1,0 +1,118 @@
+/* Header.module.css */
+
+/* Section 1: Repeating Text */
+.headerSection1 {
+    height: 32px; /* Fixed height */
+    padding: 8px 155px; /* Padding (top/bottom: 8px, left/right: 155px) */
+    display: flex; /* Flexbox container */
+    align-items: center; /* Center alignment */
+    text-align: center;
+    justify-content: center;
+    background-color: #000000; /* Background color set to black */
+    color: #EB4C6B; /* Text color set to red */
+}
+
+/* Section 2: Logo and Icons */
+.headerSection2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px; /* Horizontal padding for space from edges */
+    height: 94px; /* Adjusted height to fit the combined 188px */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.hamBurger {
+    display: none;
+}
+
+.logoImage {
+    height: 40px;
+    width: 40px;
+}
+
+.logoText {
+    text-align: center;
+    margin-left: 150px;
+}
+
+.logoTextSpan {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 43.57px;
+}
+
+/* Section 3: Navbar Tabs */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center navbar items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 70px; /* Set height for the navbar */
+    text-align: center; /* Ensures text is centered inside each link */
+}
+
+.navbarLink {
+    margin: 5px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Desktop-only elements */
+.desktopOnly {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 900px) {
+    .desktopOnly {
+        display: none;
+    }
+
+    .headerSection2{
+        padding: 0px 20px;
+    }
+
+    .headerIcons > :nth-child(4){
+        display: none;
+    }
+    /* Hide navbar on mobile */
+    .navbar {
+        display: none;
+    }
+
+    .hamBurger {
+        display: block;
+        height: 35px;
+        width: 50px;
+    }
+    /* Resize logo on mobile */
+    .logoImage {
+        height: 30px;
+    }
+
+    .logoText {
+        margin-left: 0px;
+    }
+    /* Resize logo text on mobile */
+    .logoTextSpan {
+        font-size: 24px; /* Decrease font size for mobile */
+    }
+
+    /* Hide language dropdown on mobile */
+    .languageDropdown {
+        display: none;
+    }
+
+    /* Adjust navbar link styles on mobile */
+    .navbarLink {
+        margin: 5px 10px;
+        font-size: 14px; /* Decrease font size for mobile */
+    }
+}

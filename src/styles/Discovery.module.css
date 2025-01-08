@@ -1,0 +1,124 @@
+/* src/components/discoverySection.css */
+
+.routesSection {
+  display: none;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.routesSection p {
+  margin: 0;
+  padding-right: 10px;
+  opacity: 0.5;
+}
+
+.routesSection p:last-child {
+  opacity: 1;
+  /* Make the last paragraph fully opaque */
+}
+
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+}
+
+.productContainer {
+  width: 700px;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  /* Space between heading and paragraph */
+}
+
+.productContainer h1 {
+  margin: 0;
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.productContainer p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 72px;
+  letter-spacing: 1px;
+  line-height: 2;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.dropdownContainer {
+  margin-bottom: 15px; /* Space between dropdowns */
+}
+
+.label {
+  font-weight: bold; /* Make the label bold */
+  margin-bottom: 5px; /* Space between label and dropdown */
+}
+
+.customSelect {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for better touch targets */
+  border: none; /* Border styling */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f9f9f9; /* Background color */
+  appearance: none; /* Remove default dropdown arrow */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Optional: Add a custom arrow for the dropdown */
+.customSelect::after {
+  content: '▼'; /* Custom arrow */
+  position: absolute; /* Positioning */
+  right: 10px; /* Position from the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for centering */
+  pointer-events: none; /* Prevent interaction */
+}
+
+.container {
+  display: flex; /* Use flexbox for layout */
+  width: 70%; /* Full width */
+}
+
+.sidebar {
+  width: 30%; /* Sidebar takes 30% of the width */
+  padding: 20px; /* Padding for the sidebar */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.mainContent {
+  width: 70%; /* Main content takes 70% of the width */
+  padding: 20px; /* Padding for the main content */
+  background-color: #fff; /* Background color for the main content */
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 900px) {
+  .routesSection {
+    display: flex;
+    padding: 10px 0px;
+  }
+  .productContainer h1 {
+    font-size: 23px;
+  }
+
+  .productContainer p {
+    margin-bottom: 50px;
+  }
+
+  .centeredContainer {
+    margin-top: 40px;
+  }
+}

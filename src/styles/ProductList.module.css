@@ -1,0 +1,36 @@
+/* Container for the product list */
+.productListContainer {
+  padding: 16px;
+}
+
+/* Title Styling */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+/* Grid Layout for product cards */
+.productGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 column */
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for screens 640px and up */
+  }
+}
+
+@media (min-width: 768px) {
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for screens 768px and up */
+  }
+}
+
+@media (min-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for screens 1024px and up */
+  }
+}
